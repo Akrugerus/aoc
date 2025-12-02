@@ -1,5 +1,5 @@
 class Runner:
-    def __init__(self, data):
+    def __init__(self, data: str):
         self.data = data
 
     def run(self):
@@ -9,7 +9,7 @@ class Runner:
 if __name__ == "__main__":
     with open("example/sample.txt") as file:
         runner = Runner(file.read())
-        assert runner.run() == None
+        assert runner.run() is None
 
     with open("example/input.txt") as file:
         runner = Runner(file.read())
